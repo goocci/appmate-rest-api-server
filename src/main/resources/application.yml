@@ -1,0 +1,30 @@
+logging.level:
+  org.springframework:
+    security: debug
+    boot: debug
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+#      url: jdbc:mysql://localhost/appmate?autoReconnect=true&useSSL=false
+#      username: root
+#      password: 999999999
+      url: jdbc:mysql://appmatedb.cghiiocevnc0.us-west-2.rds.amazonaws.com/appmate?autoReconnect=true&useSSL=false
+      username: appmate
+      password: appmate12
+      driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+
+#server:
+#  port: 8080
+#  ssl:
+#    key-store: classpath:sample.jks
+#    key-store-password: secret
+#    key-password: password
+
+
